@@ -11,7 +11,7 @@ class VentaDetalle:
         self.total = cantidad * precio_unitario
         pass
     def convertir_a_texto(self):
-        return "║COMPRA NUMERO: {}║CODIGO DEL PRODUCTO: {}║NOMBRE DEL PRODUCTO: {}║CANTIDAD ADQUIRIDA DEL PRODUCTO: {}|\n║PRECIO DE LA UNIDAD DEL PRODUCTO: S/.{}|\n║PRECIO IMPONIBLE DE LA COMPRA: {}|\n║IGV DE LA COMPRA: S/.{}|\n║TOTAL A PAGAR: S/.{}|\n".format(self.item,
+        return "║ N°: {}║ ID: {}║ PRODUCTO: {}║ C°: {} ║P. UNIT: S/.{} ║ IMPORTE: {} ║ IGV: S/.{} ║ TOTAL: S/.{}|\n".format(self.item,
                                                   self.codigo,
                                                   self.descripcion,
                                                   self.cantidad,
@@ -19,5 +19,13 @@ class VentaDetalle:
                                                   round(self.base_imponible,2),
                                                   round(self.igv,2),
                                                   round(self.total,2))
+
+    
+
+
+    
+
+
+    
 
     
