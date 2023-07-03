@@ -88,16 +88,16 @@ data_productos:list=[
                      "Nombre":"Procesador Intel® Core™ i5-1135G7",
                      "Precio":1700.00},
                      {"Codigo":"M1",
-                     "Nombre":"MEMORIA RAM KINGSTON FURY RENEGADE RGB 8GB DDR4 3200MHZ",
+                     "Nombre":"MEMORIA RAM KINGSTON FURY RENEGADE ",
                      "Precio":195.00},
                      {"Codigo":"M2",
-                     "Nombre":"MEMORIA RAM TG T-FORCE DELTA RGB WHITE, 8GB, DDR4 3200 MHZ",
+                     "Nombre":"MEMORIA RAM TG T-FORCE DELTA RGB WHITE",
                      "Precio":150.00},
                      {"Codigo":"R1",
-                     "Nombre":"REFRIGERACION LIQUIDA CORSAIR HYDRO SERIES H100i RGB",
+                     "Nombre":"REFRIGERACION LIQUIDA CORSAIR HYDRO ",
                      "Precio":660.00},
                      {"Codigo":"R2",
-                     "Nombre":"REFRIGERACION LIQUIDA DEEPCOOL GAMMAXX L240 A-RGB, WH",
+                     "Nombre":"REFRIGERACION LIQUIDA DEEPCOOL GAMMAXX L240 ",
                      "Precio":334.00},
                      {"Codigo":"SSD1",
                      "Nombre":"Ssd Kingston 1TB Nv2 Pcie 4.0 Nvme M.2 ",
@@ -106,34 +106,34 @@ data_productos:list=[
                      "Nombre":"Ssd Samsung 970 EVO Plus MZ-V7S1T0B/AM 1TB ",
                      "Precio":310.00},
                      {"Codigo":"CA1",
-                     "Nombre":"CASE MSI MAG FORGE M100A USB 3.2 GEN 1 TYPE-A AUTO-RGB",
+                     "Nombre":"CASE MSI MAG FORGE M100A USB 3.2 ",
                      "Precio":170.00},
                       {"Codigo":"CA2",
-                     "Nombre":"CASE CORSAIR 7000D AIRFLOW BLACK TEMPERED GLASS FULL",
+                     "Nombre":"CASE CORSAIR 7000D AIRFLOW BLACK ",
                      "Precio":650.00},
                      {"Codigo":"F1",
-                     "Nombre":"FUENTE DE PODER GAMBYTE GN600 ATX, BASIC OEM NO MODULAR,",
+                     "Nombre":"FUENTE DE PODER GAMBYTE GN600 ATX",
                      "Precio":110.00},
                       {"Codigo":"F2",
-                     "Nombre":"FUENTE DE PODER COOLER MASTER 750W ATX, BRONZE 80 PLUS",
+                     "Nombre":"FUENTE DE PODER COOLER MASTER 750W ATX",
                      "Precio":350.00},
                      {"Codigo":"M1",
-                     "Nombre":"MOUSE LOGITECH G G305 LIGHTSPEED WIRELESS GAMING USB BLACK",
+                     "Nombre":"MOUSE LOGITECH G G305 LIGHTSPEED WIRELESS",
                      "Precio":350.00},
                      {"Codigo":"M2",
                      "Nombre":"MOUSE GENIUS DX-110 NEGRO",
                      "Precio":15.00},
                       {"Codigo":"TE1",
-                     "Nombre":"TECLADO MECANICO INALAMBRICO LOGITECH G915 LIGHTSPEED RGB",
+                     "Nombre":"TECLADO MECANICO INALAMBRICO LOGITECH G915",
                      "Precio":770.00},
                       {"Codigo":"TE2",
                      "Nombre":"TECLADO CYBERTEL GAMER MECANICO EXPLORER",
                      "Precio":75.00},
                      {"Codigo":"TE3",
-                     "Nombre":"Teclado gamer Redragon Kumara K552 QWERTY Outemu Red español latinoamérica color negro con luz RGB",
+                     "Nombre":"Teclado gamer Redragon Kumara K552 ",
                      "Precio":75.00},
                      {"Codigo":"MON1",
-                     "Nombre":"Monitor Gamer LG UltraGear 23.8'' IPS 144Hz 1ms FreeSync Premium 24GN60R",
+                     "Nombre":"Monitor Gamer LG UltraGear 23.8'' IPS 144Hz ",
                      "Precio":839.00},
                      {"Codigo":"MON2",
                      "Nombre":"Monitor AOC 19.5'' HD E2070SWHN",
@@ -251,22 +251,22 @@ def buscar_venta():
                     c = canvas.Canvas(nombre_archivo)
                     c.setLineWidth(.2)
                     c.setFont('Helvetica',10)
-                    c.rect(100, 400,420,650)
-                    c.drawString(250, 800, "INFORMACION DE LA TIENDA")
-                    c.drawString(150, 780, "Tienda Física: INNOVA -- PC -- S.A.C")
-                    c.drawString(150, 760, "Dirección: Jr. Manuel Gonzales Prada N°501, Galería-KUSKA")
-                    c.drawString(150, 740, "✆Teléfono: 951685936")
-                    c.drawString(150, 720, "Horario: Lunes a Viernes de 9:00 AM a 6:00 PM")
-                    c.drawString(100, 700, "==================================================================")
-                    c.drawString(250, 680, "VOLETA ELECCTRONICA")
-                    c.drawString(250, 660, "RUC DE VOLETA: F005")
-                    c.drawString(100, 640, "==================================================================")
-                    c.drawString(110, 620, f"NOMBRE: {venta.cliente.razon_social}")
-                    c.drawString(110, 580, "DIRECCION: Jr. Manuel Gonzales Prada N°501, Galería-KUSKA      fecha:03/07/2023")
-                    c.drawString(100, 560, f"==================================================================")
-                    c.drawString(110, 540, f"ID: {venta_detalle.codigo}  | PRODUCTO: {venta_detalle.descripcion} ")
-                    c.drawString(110, 520, f"PRECIO: S/.{venta_detalle.precio_unitario} | CANTIDAD: {venta_detalle.cantidad}  | TOTAL: S/.{venta_detalle.total} ")
-                    c.drawString(410, 500, f"TOTAL: S/.{venta_detalle.total} ")
+                    c.rect(100, 100,  420,650)
+                    c.drawString(250, 680, "INFORMACION DE LA TIENDA")
+                    c.drawString(150, 660, "Tienda Física: INNOVA -- PC -- S.A.C")
+                    c.drawString(150, 640, "Dirección: Jr. Manuel Gonzales Prada N°501, Galería-KUSKA")
+                    c.drawString(150, 620, "✆Teléfono: 951685936")
+                    c.drawString(150, 600, "Horario: Lunes a Viernes de 9:00 AM a 6:00 PM")
+                    c.drawString(100, 580, "==================================================================")
+                    c.drawString(250, 560, "VOLETA ELECCTRONICA")
+                    c.drawString(250, 540, "RUC DE VOLETA: F005")
+                    c.drawString(100, 520, "==================================================================")
+                    c.drawString(110, 500, f"NOMBRE: {venta.cliente.razon_social}")
+                    c.drawString(110, 480, "DIRECCION: AREQUIPA-CERRO COLORADO                          fecha:02/07/2023")
+                    c.drawString(100, 460, f"==================================================================")
+                    c.drawString(110, 440, f"ID: {venta_detalle.codigo}    | PRODUCTO: {venta_detalle.descripcion} ")
+                    c.drawString(110, 420, f"PRECIO: S/.{venta_detalle.precio_unitario} | CANTIDAD: {venta_detalle.cantidad}  | TOTAL: S/.{venta_detalle.total} ")
+                    c.drawString(410, 400, f"TOTAL: S/.{venta_detalle.total} ")
                     c.save()
                     print("PDF generado correctamente.")
                 nombre_archivo_pdf = "mi_archivo.pdf"
@@ -276,36 +276,32 @@ def buscar_venta():
 
 def mostrar_tienda_fisica():
     print("░░░░░░░░░░░░░░░░░░░░【  𝐈 𝐍 𝐅 𝐎 𝐑 𝐌 𝐀 𝐂 𝐈 𝐎 𝐍 - 𝐃 𝐄 - 𝐋 𝐀 - 𝐓 𝐈 𝐄 𝐍 𝐃 𝐀 】░░░░░░░░░░░░░░░░░░░░\n")
-    print("╔══════════════════════════════════════════════════════════════════╗".center(90))
-    print("║             Tienda Física: INNOVA -- PC -- S.A.C                 ║".center(90))
-    print("║      Dirección: Jr. Manuel Gonzales Prada N°501, Galería-KUSKA   ║".center(90))
-    print("║                       ✆ Teléfono: 951685936                      ║".center(90))
-    print("║           Horario: Lunes a Viernes de 9:00 AM a 6:00 PM          ║".center(90))
-    print("╚══════════════════════════════════════════════════════════════════╝".center(90))
+    print("Tienda Física: INNOVA -- PC -- S.A.C".center(90))
+    print("Dirección: Jr. Manuel Gonzales Prada N°501, Galería-KUSKA".center(90))
+    print("✆Teléfono: 951685936".center(90))
+    print("Horario: Lunes a Viernes de 9:00 AM a 6:00 PM\n".center(90))
     
 def menu_texto():
-    print("╔══════════════════════════════════════════════════════════════╗")
-    print("║ ▂ ▃ ▄ ▅ ▆ ▇ █ █  𝐈 𝐍 𝐍 𝐎 𝐕 𝐀 - 𝓟 𝓒  𝐒.𝐀.𝐂.  █ █ ▇ ▆ ▅ ▄ ▃ ▂  ║")
-    print("║☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ MENU DE OPCIONES  ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰║")
-    print("║░░░░░░░░░░░░░░░【  𝙈 𝙀 𝙉 𝙐 - 𝘾 𝙇 𝙄 𝙀 𝙉 𝙏 𝙀  】░░░░░░░░░░░░░░░░║")
-    print("║ ⫸  OPCIÓN 0: Mostrar tienda física                           ║")
-    print("║ ⫸  OPCIÓN 1: Insertar Cliente                                ║")
-    print("║ ⫸  OPCIÓN 2: Listar Cliente                                  ║")
-    print("║ ⫸  OPCIÓN 3: Buscar Cliente                                  ║")
-    print("║ ⫸  OPCIÓN 4: Editar Cliente                                  ║")
-    print("║ ⫸  OPCIÓN 5: Elimiar Cliente                                 ║")
-    print("║░░░░░░░░░░░░░░░【  𝙈 𝙀 𝙉 𝙐 - 𝙋 𝙍 𝙊 𝘿 𝙐 𝘾 𝙏 𝙊 】░░░░░░░░░░░░░░░║")
-    print("║ ⫸  OPCIÓN 6: Insertar Producto                               ║")
-    print("║ ⫸  OPCIÓN 7: Lista de Productos                              ║")
-    print("║ ⫸  OPCIÓN 8: Buscar un Producto                              ║")
-    print("║ ⫸  OPCIÓN 9: Editar Producto                                 ║")
-    print("║ ⫸  OPCIÓN 10: Elimiar Producto                               ║")
-    print("║░░░░░░░░░░░░░░░░░【  𝙈 𝙀 𝙉 𝙐 - 𝙑 𝙀 𝙉 𝙏 𝘼   】░░░░░░░░░░░░░░░░░║")
-    print("║ ⫸  OPCIÓN 11: Insertar Venta                                 ║")
-    print("║ ⫸  OPCIÓN 12: Listar Venta                                   ║")
-    print("║ ⫸  OPCIÓN 13: Buscar Venta                                   ║")
-    print("║ ⫸  OPCIÓN 30: Finalizar Programa                             ║")
-    print("╚══════════════════════════════════════════════════════════════╝")
+    print("\n       ▂ ▃ ▄ ▅ ▆ ▇ █ █  𝐈 𝐍 𝐍 𝐎 𝐕 𝐀 - 𝓟 𝓒  𝐒.𝐀.𝐂.  █ █ ▇ ▆ ▅ ▄ ▃ ▂ ")
+    print("☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰  MENU DE OPCIONES  ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ ")
+    print("░░░░░░░░░░░░░░░░░░░░【  𝙈 𝙀 𝙉 𝙐 - 𝘾 𝙇 𝙄 𝙀 𝙉 𝙏 𝙀  】░░░░░░░░░░░░░░░░░░░░\n")
+    print(" ⫸  OPCIÓN 0: Mostrar tienda física")
+    print(" ⫸  OPCIÓN 1: Insertar Cliente")
+    print(" ⫸  OPCIÓN 2: Listar Cliente")
+    print(" ⫸  OPCIÓN 3: Buscar Cliente")
+    print(" ⫸  OPCIÓN 4: Editar Cliente")
+    print(" ⫸  OPCIÓN 5: Elimiar Cliente\n")
+    print("░░░░░░░░░░░░░░░░░░░░【  𝙈 𝙀 𝙉 𝙐 - 𝙋 𝙍 𝙊 𝘿 𝙐 𝘾 𝙏 𝙊 】░░░░░░░░░░░░░░░░░░░\n")
+    print(" ⫸  OPCIÓN 6: Insertar Producto")
+    print(" ⫸  OPCIÓN 7: Listar Producto")
+    print(" ⫸  OPCIÓN 8: Buscar unProducto")
+    print(" ⫸  OPCIÓN 9: Editar Producto")
+    print(" ⫸  OPCIÓN 10: Elimiar Producto\n")  
+    print("░░░░░░░░░░░░░░░░░░░░░【  𝙈 𝙀 𝙉 𝙐 - 𝙑 𝙀 𝙉 𝙏 𝘼   】░░░░░░░░░░░░░░░░░░░░░░\n")
+    print(" ⫸  OPCIÓN 11: Insertar Venta")
+    print(" ⫸  OPCIÓN 12: Listar Venta")
+    print(" ⫸  OPCIÓN 13: Buscar Venta")
+    print(" ⫸  OPCIÓN 30: Finalizar Programa\n")
     
 def menu():
     continuar:bool=True
@@ -353,6 +349,9 @@ def main():
     return True
 if __name__=='__main__':
     main()
+
+
+
 
 
 
