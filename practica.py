@@ -277,7 +277,7 @@ def menu_texto():
     print("║ ⫸  OPCIÓN 11: Insertar Venta                                 ║")
     print("║ ⫸  OPCIÓN 12: Listar Venta                                   ║")
     print("║ ⫸  OPCIÓN 13: Buscar Venta                                   ║")
-    print("║ ⫸  OPCIÓN 30: Finalizar Programa                           A  ║")
+    print("║ ⫸  OPCIÓN 30: Finalizar Programa                             ║")
     print("╚══════════════════════════════════════════════════════════════╝")
 
     
