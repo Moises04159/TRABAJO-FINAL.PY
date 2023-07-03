@@ -262,7 +262,7 @@ def buscar_venta():
                     c.drawString(250, 540, "RUC DE VOLETA: F005")
                     c.drawString(100, 520, "==================================================================")
                     c.drawString(110, 500, f"NOMBRE: {venta.cliente.razon_social}")
-                    c.drawString(110, 480, "DIRECCION: AREQUIPA-CERRO COLORADO                          fecha:02/07/2023")
+                    c.drawString(110, 480, "DIRECCION: Jr. Manuel Gonzales Prada N°501, Galería-KUSKA        fecha:03/07/2023")
                     c.drawString(100, 460, f"==================================================================")
                     c.drawString(110, 440, f"ID: {venta_detalle.codigo}    | PRODUCTO: {venta_detalle.descripcion} ")
                     c.drawString(110, 420, f"PRECIO: S/.{venta_detalle.precio_unitario} | CANTIDAD: {venta_detalle.cantidad}  | TOTAL: S/.{venta_detalle.total} ")
