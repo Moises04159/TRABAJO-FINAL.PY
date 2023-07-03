@@ -227,6 +227,10 @@ def listar_ventas():
         print(venta.convertir_a_texto())
     return ventas
         
+from reportlab.pdfgen import canvas
+
+
+
 def buscar_venta():
     numero = int(input("Ingrese el número de venta para buscar: "))
     for venta in ventas:
@@ -250,28 +254,32 @@ def mostrar_tienda_fisica():
     print("║                       ✆ Teléfono: 951685936                     ║".center(90))
     print("║           Horario: Lunes a Viernes de 9:00 AM a 6:00 PM          ║".center(90))
     print("╚══════════════════════════════════════════════════════════════════╝".center(90))
+
     
 def menu_texto():
-    print("\n       ▂ ▃ ▄ ▅ ▆ ▇ █ █  𝐈 𝐍 𝐍 𝐎 𝐕 𝐀 - 𝓟 𝓒  𝐒.𝐀.𝐂.  █ █ ▇ ▆ ▅ ▄ ▃ ▂ ")
-    print("☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰  MENU DE OPCIONES  ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ ")
-    print("░░░░░░░░░░░░░░░░░░░░【  𝙈 𝙀 𝙉 𝙐 - 𝘾 𝙇 𝙄 𝙀 𝙉 𝙏 𝙀  】░░░░░░░░░░░░░░░░░░░░\n")
-    print(" ⫸  OPCIÓN 0: Mostrar tienda física")
-    print(" ⫸  OPCIÓN 1: Insertar Cliente")
-    print(" ⫸  OPCIÓN 2: Listar Cliente")
-    print(" ⫸  OPCIÓN 3: Buscar Cliente")
-    print(" ⫸  OPCIÓN 4: Editar Cliente")
-    print(" ⫸  OPCIÓN 5: Elimiar Cliente\n")
-    print("░░░░░░░░░░░░░░░░░░░░【  𝙈 𝙀 𝙉 𝙐 - 𝙋 𝙍 𝙊 𝘿 𝙐 𝘾 𝙏 𝙊 】░░░░░░░░░░░░░░░░░░░\n")
-    print(" ⫸  OPCIÓN 6: Insertar Producto")
-    print(" ⫸  OPCIÓN 7: Listar Producto")
-    print(" ⫸  OPCIÓN 8: Buscar unProducto")
-    print(" ⫸  OPCIÓN 9: Editar Producto")
-    print(" ⫸  OPCIÓN 10: Elimiar Producto\n")  
-    print("░░░░░░░░░░░░░░░░░░░░░【  𝙈 𝙀 𝙉 𝙐 - 𝙑 𝙀 𝙉 𝙏 𝘼   】░░░░░░░░░░░░░░░░░░░░░░\n")
-    print(" ⫸  OPCIÓN 11: Insertar Venta")
-    print(" ⫸  OPCIÓN 12: Listar Venta")
-    print(" ⫸  OPCIÓN 13: Buscar Venta")
-    print(" ⫸  OPCIÓN 30: Finalizar Programa\n")
+    print("╔══════════════════════════════════════════════════════════════╗")
+    print("║ ▂ ▃ ▄ ▅ ▆ ▇ █ █  𝐈 𝐍 𝐍 𝐎 𝐕 𝐀 - 𝓟 𝓒  𝐒.𝐀.𝐂.  █ █ ▇ ▆ ▅ ▄ ▃ ▂  ║")
+    print("║☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰ MENU DE OPCIONES  ☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰☰║")
+    print("║░░░░░░░░░░░░░░░【  𝙈 𝙀 𝙉 𝙐 - 𝘾 𝙇 𝙄 𝙀 𝙉 𝙏 𝙀  】░░░░░░░░░░░░░░░░║")
+    print("║ ⫸  OPCIÓN 0: Mostrar tienda física                           ║")
+    print("║ ⫸  OPCIÓN 1: Insertar Cliente                                ║")
+    print("║ ⫸  OPCIÓN 2: Listar Cliente                                  ║")
+    print("║ ⫸  OPCIÓN 3: Buscar Cliente                                  ║")
+    print("║ ⫸  OPCIÓN 4: Editar Cliente                                  ║")
+    print("║ ⫸  OPCIÓN 5: Elimiar Cliente                                 ║")
+    print("║░░░░░░░░░░░░░░░【  𝙈 𝙀 𝙉 𝙐 - 𝙋 𝙍 𝙊 𝘿 𝙐 𝘾 𝙏 𝙊 】░░░░░░░░░░░░░░░║")
+    print("║ ⫸  OPCIÓN 6: Insertar Producto                               ║")
+    print("║ ⫸  OPCIÓN 7: Listar Producto                                 ║")
+    print("║ ⫸  OPCIÓN 8: Buscar un Producto                              ║")
+    print("║ ⫸  OPCIÓN 9: Editar Producto                                 ║")
+    print("║ ⫸  OPCIÓN 10: Elimiar Producto                               ║")
+    print("║░░░░░░░░░░░░░░░░░【  𝙈 𝙀 𝙉 𝙐 - 𝙑 𝙀 𝙉 𝙏 𝘼   】░░░░░░░░░░░░░░░░░║")
+    print("║ ⫸  OPCIÓN 11: Insertar Venta                                 ║")
+    print("║ ⫸  OPCIÓN 12: Listar Venta                                   ║")
+    print("║ ⫸  OPCIÓN 13: Buscar Venta                                   ║")
+    print("║ ⫸  OPCIÓN 30: Finalizar Programa                           A  ║")
+    print("╚══════════════════════════════════════════════════════════════╝")
+
     
 def menu():
     continuar:bool=True
