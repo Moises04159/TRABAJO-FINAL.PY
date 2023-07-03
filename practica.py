@@ -243,6 +243,39 @@ def buscar_venta():
             for venta_detalle in venta.detalle:
                 print(venta_detalle.convertir_a_texto())
                 print("║====================================================================║")
+                import datetime
+                from reportlab.pdfgen import canvas
+                from reportlab.lib.pagesizes import letter
+                import platform
+                import os
+                import time
+
+                def imprimir_pdf(nombre_archivo):
+                    w, h = letter
+                    c = canvas.Canvas(nombre_archivo)
+                    c.setLineWidth(.2)
+                    c.setFont('Helvetica',10)
+                    c.rect(100, 500,420,700)
+                    c.drawString(250, 800, "INFORMACION DE LA TIENDA")
+                    c.drawString(150, 780, "Tienda Física: INNOVA -- PC -- S.A.C")
+                    c.drawString(150, 760, "Dirección: Jr. Manuel Gonzales Prada N°501, Galería-KUSKA")
+                    c.drawString(150, 740, "✆Teléfono: 951685936")
+                    c.drawString(150, 720, "Horario: Lunes a Viernes de 9:00 AM a 6:00 PM")
+                    c.drawString(100, 700, "==================================================================")
+                    c.drawString(250, 680, "VOLETA ELECCTRONICA")
+                    c.drawString(250, 660, "RUC DE VOLETA: F005")
+                    c.drawString(100, 640, "==================================================================")
+                    c.drawString(110, 620, f"NOMBRE: {venta.cliente.razon_social}")
+                    c.drawString(110, 600, f"DNI: {venta_detalle.codigo}")
+                    c.drawString(110, 580, "DIRECCION: AREQUIPA-CERRO COLORADO                          fecha:02/07/2023")
+                    c.drawString(100, 560, f"==================================================================")
+                    c.drawString(110, 540, f"ID: {venta_detalle.codigo}  | PRODUCTO: {venta_detalle.descripcion}  | PRECIO: S/.{venta_detalle.precio_unitario} | CANTIDAD: {venta_detalle.cantidad}  | TOTAL: S/.{venta_detalle.total} ")
+                    c.drawString(410, 520, f"TOTAL: S/.{venta_detalle.total} ")
+                    c.save()
+                    print("PDF generado correctamente.")
+                nombre_archivo_pdf = "mi_archivo.pdf"
+
+                imprimir_pdf(nombre_archivo_pdf)
             print("╚════════════════════════════════════════════════════════════════════╝")
             return venta
 
