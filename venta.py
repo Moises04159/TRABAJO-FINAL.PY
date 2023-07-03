@@ -12,7 +12,7 @@ class Venta:
         self.total=total
         pass
     def convertir_a_texto(self):
-        return "|CODIGO DE LA BOLETA: {}|\n|NUMERO DE LA BOLETA: {}|\n|CLIENTE: {}|\n|BASE IMPONIBLE: S/.{} |\n|IGV: S/. {}|\n|TOTAL: S/. {}|\n".format(self.serie,
+        return "║CODIGO DE LA BOLETA: {}|\n║NUMERO DE LA BOLETA: {}|\n║CLIENTE: {}|\n║BASE IMPONIBLE: S/.{} |\n║IGV: S/. {}|\n║TOTAL: S/. {}|\n".format(self.serie,
                                             self.numero,
                                             self.cliente.razon_social,
                                             round(self.base_imponible,2),
