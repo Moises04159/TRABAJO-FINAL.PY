@@ -198,7 +198,7 @@ ventas:Venta=[]
 venta_detalles:VentaDetalle=[]
 def agregar_productos():
     producto:Producto=buscar_producto()
-    cantidad:float=float(input("Ingrese la cantidad del producto: "))
+    cantidad:int=int(input("Ingrese la cantidad del producto: "))
     venta_detalles.append(VentaDetalle(len(venta_detalles)+1,
                                        producto.codigo,
                                        producto.nombre,
@@ -257,16 +257,16 @@ def buscar_venta():
                     c.drawString(150, 640, "Dirección: Jr. Manuel Gonzales Prada N°501, Galería-KUSKA")
                     c.drawString(150, 620, "✆Teléfono: 951685936")
                     c.drawString(150, 600, "Horario: Lunes a Viernes de 9:00 AM a 6:00 PM")
-                    c.drawString(100, 580, "==================================================================")
+                    c.drawString(100, 580, "========================================================================")
                     c.drawString(250, 560, "VOLETA ELECCTRONICA")
                     c.drawString(250, 540, "RUC DE VOLETA: F005")
-                    c.drawString(100, 520, "==================================================================")
+                    c.drawString(100, 520, "========================================================================")
                     c.drawString(110, 500, f"NOMBRE: {venta.cliente.razon_social}")
                     c.drawString(110, 480, "DIRECCION: Jr. Manuel Gonzales Prada N°501, Galería-KUSKA        fecha:03/07/2023")
-                    c.drawString(100, 460, f"==================================================================")
+                    c.drawString(100, 460, "========================================================================")
                     c.drawString(110, 440, f"ID: {venta_detalle.codigo}    | PRODUCTO: {venta_detalle.descripcion} ")
-                    c.drawString(110, 420, f"PRECIO: S/.{venta_detalle.precio_unitario} | CANTIDAD: {venta_detalle.cantidad}  | TOTAL: S/.{venta_detalle.total} ")
-                    c.drawString(410, 400, f"TOTAL: S/.{venta_detalle.total} ")
+                    c.drawString(110, 420, f"CANTIDAD: {venta_detalle.cantidad}  || P. UNIT: S/.{venta_detalle.precio_unitario}  || IMPORTE: S/.{round(venta_detalle.base_imponible,2)}  || IGV: {round(venta_detalle.igv,2)} ")
+                    c.drawString(410, 380, f"TOTAL: S/.{venta_detalle.total} ")
                     c.save()
                     print("PDF generado correctamente.")
                 nombre_archivo_pdf = "mi_archivo.pdf"
@@ -353,9 +353,6 @@ def main():
     return True
 if __name__=='__main__':
     main()
-
-
-
 
 
 
