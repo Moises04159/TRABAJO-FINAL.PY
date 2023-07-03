@@ -269,7 +269,7 @@ def menu_texto():
     print("║ ⫸  OPCIÓN 5: Elimiar Cliente                                 ║")
     print("║░░░░░░░░░░░░░░░【  𝙈 𝙀 𝙉 𝙐 - 𝙋 𝙍 𝙊 𝘿 𝙐 𝘾 𝙏 𝙊 】░░░░░░░░░░░░░░░║")
     print("║ ⫸  OPCIÓN 6: Insertar Producto                               ║")
-    print("║ ⫸  OPCIÓN 7: Listar Producto                                 ║")
+    print("║ ⫸  OPCIÓN 7: Lista de Productos                              ║")
     print("║ ⫸  OPCIÓN 8: Buscar un Producto                              ║")
     print("║ ⫸  OPCIÓN 9: Editar Producto                                 ║")
     print("║ ⫸  OPCIÓN 10: Elimiar Producto                               ║")
