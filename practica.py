@@ -249,10 +249,10 @@ def buscar_venta():
                 def imprimir_pdf(nombre_archivo):
                     w, h = letter
                     c = canvas.Canvas(nombre_archivo)
-                    c.setLineWidth(.2)
+                    c.setLineWidth(.2)    
                     c.setFont('Helvetica',10)
                     c.rect(100, 100,  420,650)
-                    c.drawString(250, 680, "INFORMACION DE LA TIENDA")
+                    c.drawString(250, 700, "INFORMACION DE LA TIENDA")
                     c.drawString(150, 660, "Tienda Física: INNOVA -- PC -- S.A.C")
                     c.drawString(150, 640, "Dirección: Jr. Manuel Gonzales Prada N°501, Galería-KUSKA")
                     c.drawString(150, 620, "✆Teléfono: 951685936")
@@ -262,7 +262,7 @@ def buscar_venta():
                     c.drawString(250, 540, "RUC DE VOLETA: F005")
                     c.drawString(100, 520, "========================================================================")
                     c.drawString(110, 500, f"NOMBRE: {venta.cliente.razon_social}")
-                    c.drawString(110, 480, "DIRECCION: Jr. Manuel Gonzales Prada N°501, Galería-KUSKA        fecha:03/07/2023")
+                    c.drawString(110, 480, "DIRECCION: JULIACA - SAN ROMAN                          fecha:03/07/2023")
                     c.drawString(100, 460, "========================================================================")
                     c.drawString(110, 440, f"ID: {venta_detalle.codigo}    | PRODUCTO: {venta_detalle.descripcion} ")
                     c.drawString(110, 420, f"CANTIDAD: {venta_detalle.cantidad}  || P. UNIT: S/.{venta_detalle.precio_unitario}  || IMPORTE: S/.{round(venta_detalle.base_imponible,2)}  || IGV: {round(venta_detalle.igv,2)} ")
