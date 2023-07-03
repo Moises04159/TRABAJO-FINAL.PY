@@ -227,22 +227,18 @@ def listar_ventas():
         print(venta.convertir_a_texto())
     return ventas
         
-from reportlab.pdfgen import canvas
-
-
-
 def buscar_venta():
-    numero = int(input("Ingrese el número de venta para buscar: "))
+    numero:int=int(input("Ingrese el numero de la venta para bucar: "))
     for venta in ventas:
-        if venta.numero == numero:
-            print("╔════════════════════════ BOLETA DE VENTA ═════════════════════════╗")
-            print("║      ▂ ▃ ▄ ▅ ▆ ▇ █ █  𝐈 𝐍 𝐍 𝐎 𝐕 𝐀 - 𝓟 𝓒  𝐒.𝐀.𝐂.  █ █ ▇ ▆ ▅ ▄ ▃ ▂ ║")
-            print("║==================================================================║")
+        if venta.numero==numero:
+            print("\n|════════════════════════ BOLETA DE VENTA ════════════════════════════| \n       ▂ ▃ ▄ ▅ ▆ ▇ █ █  𝐈 𝐍 𝐍 𝐎 𝐕 𝐀 - 𝓟 𝓒  𝐒.𝐀.𝐂.  █ █ ▇ ▆ ▅ ▄ ▃ ▂")
+            print("\n================================")
             print(venta.convertir_a_texto())
-            print("║====================================================================║")
+            print("================================")
             for venta_detalle in venta.detalle:
                 print(venta_detalle.convertir_a_texto())
-                print("║====================================================================║")
+                print("================================")
+            
                 import datetime
                 from reportlab.pdfgen import canvas
                 from reportlab.lib.pagesizes import letter
@@ -255,7 +251,7 @@ def buscar_venta():
                     c = canvas.Canvas(nombre_archivo)
                     c.setLineWidth(.2)
                     c.setFont('Helvetica',10)
-                    c.rect(100, 500,420,700)
+                    c.rect(100, 400,420,650)
                     c.drawString(250, 800, "INFORMACION DE LA TIENDA")
                     c.drawString(150, 780, "Tienda Física: INNOVA -- PC -- S.A.C")
                     c.drawString(150, 760, "Dirección: Jr. Manuel Gonzales Prada N°501, Galería-KUSKA")
@@ -266,28 +262,26 @@ def buscar_venta():
                     c.drawString(250, 660, "RUC DE VOLETA: F005")
                     c.drawString(100, 640, "==================================================================")
                     c.drawString(110, 620, f"NOMBRE: {venta.cliente.razon_social}")
-                    c.drawString(110, 600, f"DNI: {venta_detalle.codigo}")
-                    c.drawString(110, 580, "DIRECCION: AREQUIPA-CERRO COLORADO                          fecha:02/07/2023")
+                    c.drawString(110, 580, "DIRECCION: Jr. Manuel Gonzales Prada N°501, Galería-KUSKA      fecha:03/07/2023")
                     c.drawString(100, 560, f"==================================================================")
-                    c.drawString(110, 540, f"ID: {venta_detalle.codigo}  | PRODUCTO: {venta_detalle.descripcion}  | PRECIO: S/.{venta_detalle.precio_unitario} | CANTIDAD: {venta_detalle.cantidad}  | TOTAL: S/.{venta_detalle.total} ")
-                    c.drawString(410, 520, f"TOTAL: S/.{venta_detalle.total} ")
+                    c.drawString(110, 540, f"ID: {venta_detalle.codigo}  | PRODUCTO: {venta_detalle.descripcion} ")
+                    c.drawString(110, 520, f"PRECIO: S/.{venta_detalle.precio_unitario} | CANTIDAD: {venta_detalle.cantidad}  | TOTAL: S/.{venta_detalle.total} ")
+                    c.drawString(410, 500, f"TOTAL: S/.{venta_detalle.total} ")
                     c.save()
                     print("PDF generado correctamente.")
                 nombre_archivo_pdf = "mi_archivo.pdf"
 
                 imprimir_pdf(nombre_archivo_pdf)
-            print("╚════════════════════════════════════════════════════════════════════╝")
-            return venta
+            return venta 
 
 def mostrar_tienda_fisica():
     print("░░░░░░░░░░░░░░░░░░░░【  𝐈 𝐍 𝐅 𝐎 𝐑 𝐌 𝐀 𝐂 𝐈 𝐎 𝐍 - 𝐃 𝐄 - 𝐋 𝐀 - 𝐓 𝐈 𝐄 𝐍 𝐃 𝐀 】░░░░░░░░░░░░░░░░░░░░\n")
     print("╔══════════════════════════════════════════════════════════════════╗".center(90))
     print("║             Tienda Física: INNOVA -- PC -- S.A.C                 ║".center(90))
     print("║      Dirección: Jr. Manuel Gonzales Prada N°501, Galería-KUSKA   ║".center(90))
-    print("║                       ✆ Teléfono: 951685936                     ║".center(90))
+    print("║                       ✆ Teléfono: 951685936                      ║".center(90))
     print("║           Horario: Lunes a Viernes de 9:00 AM a 6:00 PM          ║".center(90))
     print("╚══════════════════════════════════════════════════════════════════╝".center(90))
-
     
 def menu_texto():
     print("╔══════════════════════════════════════════════════════════════╗")
@@ -312,7 +306,6 @@ def menu_texto():
     print("║ ⫸  OPCIÓN 13: Buscar Venta                                   ║")
     print("║ ⫸  OPCIÓN 30: Finalizar Programa                             ║")
     print("╚══════════════════════════════════════════════════════════════╝")
-
     
 def menu():
     continuar:bool=True
